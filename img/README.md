@@ -1,23 +1,30 @@
 # Folder foto
 
-Unggah foto ke folder ini dengan **nama file persis** seperti di bawah. Selama file belum ada, situs otomatis menampilkan placeholder.
+Nama file harus **persis sama** dengan yang tertulis di `CONFIG` dalam `index.html` (huruf besar/kecil dan spasi berpengaruh di GitHub Pages dan hosting Linux). Foto yang belum ada otomatis diganti placeholder.
 
-| File | Dipakai di | Ukuran disarankan |
+## Foto produk (sudah dipetakan di kode)
+
+| File | Produk | Dipakai juga di |
 |---|---|---|
-| `gerai.jpg` | Slider hero 1 | 1600×1280 (rasio 5:4) |
-| `peternakan.jpg` | Slider hero 2 | 1600×1280 |
-| `pemotongan.jpg` | Slider hero 3 | 1600×1280 |
-| `penyimpanan.jpg` | Slider hero 4 | 1600×1280 |
-| `produk-utuh.jpg` | Ayam utuh | 1200×750 (rasio 16:10) |
-| `produk-dada.jpg` | Dada | 1200×750 |
-| `produk-fillet.jpg` | Dada fillet | 1200×750 |
-| `produk-paha-atas.jpg` | Paha atas | 1200×750 |
-| `produk-paha-bawah.jpg` | Paha bawah | 1200×750 |
-| `produk-sayap.jpg` | Sayap | 1200×750 |
-| `produk-ceker.jpg` | Ceker | 1200×750 |
-| `produk-ati-ampela.jpg` | Ati ampela | 1200×750 |
-| `produk-kepala-leher.jpg` | Kepala & leher | 1200×750 |
-| `produk-rangka.jpg` | Tulang / rangka | 1200×750 |
+| `Ayam ekoran.jpeg` | Ayam utuh / ekoran | Hero (besar), latar ajakan penutup |
+| `Dada filet.jpeg` | Dada fillet | Hero |
+| `Paha pentung.jpeg` | Paha bawah (pentung) | Hero |
+| `Sayap.jpeg` | Sayap | |
+| `Ceker.jpeg` | Ceker | |
+| `Hati ampela.jpeg` | Hati ampela | |
+| `Usus.jpeg` | Usus | |
+| `Kulit.jpeg` | Kulit | |
+| `Kepala.jpeg` | Kepala & leher | |
 
-Tips: kompres foto (mis. squoosh.app) hingga < 300 KB per file agar situs cepat dibuka di HP. Nama file peka huruf besar/kecil (`Gerai.JPG` ≠ `gerai.jpg`).
-Untuk memakai format/nama lain, ubah kolom `foto` di bagian `CONFIG` dalam `index.html`.
+Semua foto produk yang ada juga tampil di strip foto berjalan di bawah hero (muncul jika minimal 4 foto tersedia).
+
+## Belum ada foto (opsional)
+
+| File | Dipakai di |
+|---|---|
+| `produk-dada.jpg` | Dada (bertulang) |
+| `produk-paha-atas.jpg` | Paha atas |
+| `produk-rangka.jpg` | Tulang / rangka |
+| `gerai.jpg`, `peternakan.jpg`, `pemotongan.jpg`, `penyimpanan.jpg` | Bagian "Proses kami". Slider foto baru muncul jika minimal satu file ini ada; sebelumnya tampil sebagai 4 kartu langkah. |
+
+Ukuran disarankan: produk ≥ 1200 px sisi panjang, rasio 4:3; proses 1600×1280. Kompres hingga < 300 KB per file.

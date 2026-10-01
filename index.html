@@ -569,7 +569,7 @@ legend{font-size:.84rem;font-weight:600;padding:0;margin-bottom:8px}
 /* Footer */
 footer{padding:64px 0 120px;margin-top:96px;border-top:1px solid var(--line)}
 .foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
-.foot h4{margin:0 0 10px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.foot h3.fh{font-family:var(--body);letter-spacing:.14em;line-height:1.4;margin:0 0 10px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .foot p,.foot a{font-size:.95rem}
 .foot nav{display:grid;gap:6px}
 .foot nav a{text-decoration:none;color:var(--muted)}
@@ -716,7 +716,7 @@ footer{padding:64px 0 120px;margin-top:96px;border-top:1px solid var(--line)}
               <div><b>Gratis ongkir mulai <span data-bind="minKg">300</span> kg</b><span>Ke seluruh Jakarta, Bogor, Depok, Tangerang, Bekasi.</span></div></li>
           </ul>
           <div class="qr-card" hidden>
-            <img src="img/Barcode.jpg" alt="Kode QR situs Asyifa Jaya" width="120" height="120" loading="lazy">
+            <img src="img/Barcode-web.png" alt="Kode QR situs Asyifa Jaya" width="120" height="120" loading="lazy">
             <div><b>Lebih mudah lewat HP</b><span>Scan kode ini dengan kamera HP untuk membuka situs dan mengirim pesanan langsung dari WhatsApp di HP.</span></div>
           </div>
         </div>
@@ -894,14 +894,14 @@ footer{padding:64px 0 120px;margin-top:96px;border-top:1px solid var(--line)}
         </a>
         <p style="color:var(--muted);margin-top:14px;max-width:38ch">Ayam utuh dan potongan untuk usaha dan rumah tangga di Jabodetabek.</p>
         <div class="qr-card qr-foot" hidden>
-          <img src="img/Barcode.jpg" alt="Kode QR situs Asyifa Jaya" width="96" height="96" loading="lazy">
+          <img src="img/Barcode-web.png" alt="Kode QR situs Asyifa Jaya" width="96" height="96" loading="lazy">
           <div><b>Buka di HP</b><span>Scan untuk menyimpan situs ini di HP.</span></div>
         </div>
       </div>
-      <div><h4>Gerai</h4><p data-bind="alamatGerai">Pasar Kebayoran Lama, Depan Toko Ananda</p></div>
-      <div><h4>Jam buka</h4><p data-bind="jamBuka">14.00-23.00 WIB, Setiap Hari</p>
+      <div><h3 class="fh">Gerai</h3><p data-bind="alamatGerai">Pasar Kebayoran Lama, Depan Toko Ananda</p></div>
+      <div><h3 class="fh">Jam buka</h3><p data-bind="jamBuka">14.00-23.00 WIB, Setiap Hari</p>
         <p style="margin-top:10px"><a data-wa href="#" style="font-weight:700">Chat WhatsApp →</a></p></div>
-      <div><h4>Menu</h4>
+      <div><h3 class="fh">Menu</h3>
         <nav aria-label="Navigasi bawah"><a href="#mitra">Untuk usaha</a><a href="#penawaran">Harga partai</a><a href="#produk">Produk</a><a href="#faq">FAQ</a></nav></div>
     </div>
     <p class="copy">© <span id="yr"></span> <span data-bind="namaUsaha">Asyifa Jaya</span>. Seluruh harga dan ketersediaan dikonfirmasi via WhatsApp.</p>
@@ -938,13 +938,14 @@ const CONFIG = {
   pesanWA: "Asyifa Jaya saya ingin bertanya mengenai harga ayam saat ini?",
   areaKirim: ["Jakarta", "Bogor", "Depok", "Tangerang", "Bekasi"],
 
+  // FOTO PROSES: kosong = belum ada (tidak diminta ke server). Jika foto tersedia, isi mis. "img/gerai.jpg".
   // FOTO: unggah file ke folder img/ dengan nama persis seperti di bawah.
   // Jika file belum ada, otomatis tampil placeholder. Lihat img/README.md.
   slides: [
-    { judul: "Gerai kami",      teks: "Datang langsung, lihat stok, dan ambil pesanan Anda.",   foto: "img/gerai.jpg",       ikon: "store" },
-    { judul: "Dari peternakan", teks: "Ayam diangkut dari peternakan ke tempat pemotongan.",    foto: "img/peternakan.jpg",  ikon: "truck" },
-    { judul: "Pemotongan",      teks: "Dipotong sesuai pesanan: utuh, per bagian, atau fillet.", foto: "img/pemotongan.jpg",  ikon: "knife" },
-    { judul: "Penyimpanan",     teks: "Disimpan di ruang pendingin sampai waktu pengiriman.",   foto: "img/penyimpanan.jpg", ikon: "cold" }
+    { judul: "Gerai kami",      teks: "Datang langsung, lihat stok, dan ambil pesanan Anda.",   foto: "",       ikon: "store" },
+    { judul: "Dari peternakan", teks: "Ayam diangkut dari peternakan ke tempat pemotongan.",    foto: "",  ikon: "truck" },
+    { judul: "Pemotongan",      teks: "Dipotong sesuai pesanan: utuh, per bagian, atau fillet.", foto: "",  ikon: "knife" },
+    { judul: "Penyimpanan",     teks: "Disimpan di ruang pendingin sampai waktu pengiriman.",   foto: "", ikon: "cold" }
   ],
 
   // Segmen usaha (bagian "Untuk usaha")
@@ -1042,11 +1043,12 @@ document.querySelectorAll("[data-bind]").forEach(el => {
 $("yr").textContent = new Date().getFullYear();
 
 
-/* Kode QR: tampil hanya jika file img/Barcode.jpg ada */
+/* Kode QR: tampil hanya jika file ada. Barcode-web.png = Barcode.jpg dipotong ke area putih */
 (function () {
+  if (!matchMedia("(hover: hover) and (pointer: fine)").matches) return; // HP: tidak ditampilkan, tidak diunduh
   const im = new Image();
   im.onload = () => document.querySelectorAll(".qr-card").forEach(c => c.hidden = false);
-  im.src = "img/Barcode.jpg";
+  im.src = "img/Barcode-web.png";
 })();
 
 /* Tombol WA umum */

@@ -700,8 +700,11 @@ const CONFIG = {
   jamBuka: "14.00-23.00 WIB, Setiap Hari",
   minGratisOngkirKg: 300,
   logo: "img/Logo Asyifa Jaya.jpeg",
-  // Pesan otomatis untuk tombol WhatsApp umum (header, tombol bulat, footer)
-  pesanWA: "Hallo,🖐🏻\nAsyifa jaya saya ingin bertanya mengenai harga ayam saat ini?\nTerimakasih☺️",
+  // Semua pesan WhatsApp diawali salamAwal dan diakhiri salamAkhir
+  salamAwal: "Hallo,🖐🏻",
+  salamAkhir: "Terimakasih☺️",
+  // Isi pesan tombol chat WhatsApp (header, tombol bulat, footer, penutup)
+  pesanWA: "Asyifa Jaya saya ingin bertanya mengenai harga ayam saat ini?",
   areaKirim: ["Jakarta", "Bogor", "Depok", "Tangerang", "Bekasi"],
 
   // FOTO: unggah file ke folder img/ dengan nama persis seperti di bawah.
@@ -767,7 +770,9 @@ const $ = id => document.getElementById(id);
 const fmt = n => n.toLocaleString("id-ID", { maximumFractionDigits: 1 });
 const rp  = n => "Rp " + Math.round(n).toLocaleString("id-ID");
 const waValid = () => /^62\d{8,13}$/.test(CONFIG.nomorWA);
-const waUrl = text => "https://wa.me/" + CONFIG.nomorWA + "?text=" + encodeURIComponent(text);
+// Pesan panjang (formulir) diberi baris kosong sebelum salam penutup agar mudah dibaca
+const waText = body => { const b = body.trim(); return CONFIG.salamAwal + "\n" + b + (b.includes("\n") ? "\n\n" : "\n") + CONFIG.salamAkhir; };
+const waUrl = body => "https://wa.me/" + CONFIG.nomorWA + "?text=" + encodeURIComponent(waText(body));
 
 function toast(msg) {
   const t = $("toast");
@@ -823,9 +828,7 @@ $("yr").textContent = new Date().getFullYear();
 
 /* Tombol WA umum */
 document.querySelectorAll("[data-wa]").forEach(a => {
-  const msg = a.dataset.waMsg === "partai"
-    ? `Halo ${CONFIG.namaUsaha}, saya ingin minta penawaran harga partai besar.`
-    : CONFIG.pesanWA;
+  const msg = CONFIG.pesanWA;
   if (waValid()) { a.href = waUrl(msg); a.target = "_blank"; a.rel = "noopener"; }
   a.addEventListener("click", e => { if (!waValid()) { e.preventDefault(); openWA(msg); } });
 });
@@ -995,7 +998,7 @@ $("qform").addEventListener("submit", e => {
   if (!kg) { toast("Isi kebutuhan per pengiriman (kg) terlebih dahulu."); $("qKg").focus(); return; }
   const v = id => $(id).value.trim();
   const ar = $("qArea");
-  let msg = `Halo ${CONFIG.namaUsaha}, saya ingin minta *penawaran harga partai besar*.\n\n`;
+  let msg = `${CONFIG.namaUsaha}, saya ingin minta *penawaran harga partai besar*.\n\n`;
   msg += `Nama usaha: ${v("qNama") || "-"}\nJenis usaha: ${v("qJenis")}\n`;
   msg += `Kebutuhan: ${fmt(kg)} kg per pengiriman\nFrekuensi: ${f.label}\n`;
   if (bulan !== null) msg += `Perkiraan volume: ± ${fmt(Math.round(bulan))} kg/bulan\n`;
@@ -1090,7 +1093,7 @@ $("sendOrder").addEventListener("click", () => {
   if (!items.length) { toast("Pilih minimal satu produk terlebih dahulu."); return; }
   const v = id => $(id).value.trim();
   const areaLabel = area.options[area.selectedIndex].text;
-  let msg = `Halo ${CONFIG.namaUsaha}, saya ingin memesan:\n`;
+  let msg = `${CONFIG.namaUsaha}, saya ingin memesan:\n`;
   items.forEach(x => { msg += `- ${x.nama}: ${fmt(x.kg)} kg\n`; });
   msg += `\nTotal: ${fmt(kg)} kg\n`;
   if (est !== null) msg += `Estimasi harga produk: ${rp(est)}\n`;

@@ -3,223 +3,381 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ayam Segar — Ayam Utuh & Potongan, Partai Besar Jabodetabek</title>
-<meta name="description" content="Pemasok ayam utuh dan potongan. Melayani eceran dan partai besar. Gratis ongkir se-Jabodetabek untuk pesanan minimal 50 kg.">
+<title>Asyifa Jaya — Pemasok Ayam Potong Partai Besar Jabodetabek</title>
+<meta name="description" content="Pemasok ayam utuh dan potongan untuk restoran, katering, hotel, dan reseller. Pengiriman terjadwal, gratis ongkir se-Jabodetabek untuk pesanan minimal 50 kg.">
+<meta name="theme-color" content="#1F4D3A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Asyifa Jaya — Pemasok Ayam Potong Partai Besar">
+<meta property="og:description" content="Ayam utuh dan potongan untuk dapur usaha. Gratis ongkir se-Jabodetabek mulai 50 kg.">
+<meta property="og:locale" content="id_ID">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231F4D3A'/%3E%3Cpath d='M16 7c-3.6 0-6 3.3-6 7.6S12.4 25 16 25s6-6.1 6-10.4S19.6 7 16 7z' fill='%23E0A21B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F2F5F7; --surface:#FFFFFF; --ink:#13293D; --muted:#4B5E6F; --line:#D3DCE3;
-  --panel:#13293D; --on-panel:#EEF3F6; --panel-muted:#B9C7D3;
-  --yolk:#F2B705; --on-yolk:#13293D; --wa:#1A7F45; --on-wa:#FFFFFF;
-  --display:"Bricolage Grotesque","Plus Jakarta Sans",system-ui,sans-serif;
+  --bg:#F7F3EA; --bg-2:#EFE8D8; --surface:#FFFDF8; --ink:#1C2B22; --muted:#56655B; --line:#E2DACA;
+  --brand:#1F4D3A; --brand-2:#163A2B; --on-brand:#F7F3EA; --on-brand-muted:#BFD0C5;
+  --accent:#E0A21B; --on-accent:#1C2B22; --wa:#1A7F45; --on-wa:#FFFFFF;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
   --body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --r-sm:8px; --r-lg:20px;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
+  --r-sm:10px; --r:16px; --r-lg:28px;
+  --shadow:0 1px 2px rgba(28,43,34,.06),0 12px 32px -12px rgba(28,43,34,.18);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0E1B27; --surface:#152737; --ink:#E8EFF4; --muted:#A3B4C2; --line:#27405A;
-    --panel:#1B3449; --on-panel:#EEF3F6; --panel-muted:#B9C7D3;
+    --bg:#0F1A14; --bg-2:#14221A; --surface:#17271E; --ink:#EDE7D9; --muted:#A8B5AC; --line:#2A3C31;
+    --brand:#1F4D3A; --brand-2:#173D2D; --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -12px rgba(0,0,0,.6);
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0E1B27; --surface:#152737; --ink:#E8EFF4; --muted:#A3B4C2; --line:#27405A;
-  --panel:#1B3449; --on-panel:#EEF3F6; --panel-muted:#B9C7D3;
+  --bg:#0F1A14; --bg-2:#14221A; --surface:#17271E; --ink:#EDE7D9; --muted:#A8B5AC; --line:#2A3C31;
+  --brand:#1F4D3A; --brand-2:#173D2D; --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px -12px rgba(0,0,0,.6);
 }
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+html{scroll-padding-top:96px;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--yolk);outline-offset:3px;border-radius:4px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
 .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-0.02em}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;margin:0;letter-spacing:-0.015em}
 p{margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--accent)}
+.on-dark .eyebrow{color:var(--on-brand-muted)}
+em.hl{font-style:italic;color:var(--brand)}
+:root[data-theme="dark"] em.hl{color:var(--accent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) em.hl{color:var(--accent)}}
 
-/* Header */
-.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.site-head .wrap{display:flex;align-items:center;gap:24px;height:68px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.25rem}
-.brand-mark{width:34px;height:34px;border-radius:50%;background:var(--yolk);display:grid;place-items:center;color:var(--on-yolk)}
-.nav{display:flex;gap:22px;margin-left:auto}
-.nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--muted)}
-.nav a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;border:0;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:0;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;transition:transform .2s ease,filter .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--brand);color:var(--on-brand)}
+.btn-primary:hover{background:var(--brand-2)}
+.btn-accent{background:var(--accent);color:var(--on-accent)}
+.btn-accent:hover{filter:brightness(1.06)}
 .btn-wa{background:var(--wa);color:var(--on-wa)}
 .btn-wa:hover{filter:brightness(1.08)}
-.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
-.btn-ghost:hover{background:var(--ink);color:var(--bg)}
-.btn svg{width:20px;height:20px;flex:none}
-.head-cta{min-height:44px;padding:0 16px;font-size:.92rem}
-@media (max-width:820px){.nav{display:none}.head-cta{margin-left:auto}}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-ghost-light{background:transparent;color:var(--on-brand);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+.btn-ghost-light:hover{box-shadow:inset 0 0 0 1.5px var(--on-brand)}
+
+/* Top bar + header */
+.topbar{background:var(--brand);color:var(--on-brand);font-size:.85rem}
+.topbar .wrap{display:flex;justify-content:center;gap:28px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap;text-align:center}
+.topbar span{display:inline-flex;align-items:center;gap:8px}
+.topbar svg{width:15px;height:15px;color:var(--accent)}
+@media (max-width:640px){.topbar .hide-sm{display:none}}
+.site-head{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.site-head.scrolled{border-bottom-color:var(--line)}
+.site-head .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{width:40px;height:40px;border-radius:12px;background:var(--brand);display:grid;place-items:center;color:var(--accent);flex:none}
+.brand-name{font-family:var(--display);font-weight:700;font-size:1.3rem;line-height:1}
+.brand-sub{display:block;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:600;font-size:.93rem;color:var(--muted);position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{transform:scaleX(1)}
+.head-cta{min-height:44px;padding:0 18px;font-size:.92rem}
+@media (max-width:900px){.nav{display:none}.head-cta{margin-left:auto}}
+@media (max-width:420px){.brand-sub{display:none}.head-cta span{display:none}.head-cta{width:44px;padding:0}}
 
 /* Hero */
-.hero{padding:40px 0 28px}
-.hero-grid{display:grid;grid-template-columns:5fr 7fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(2.4rem,5.2vw,4.4rem);font-weight:800}
-.hero .lede{margin-top:20px;font-size:1.125rem;color:var(--muted);max-width:34ch}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero{padding-top:28px}}
+.hero{padding:56px 0 40px;position:relative}
+.hero::before{content:"";position:absolute;inset:0 0 auto auto;width:55%;height:100%;background:radial-gradient(60% 60% at 70% 30%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;position:relative}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.6rem);margin-top:18px}
+.hero .lede{margin-top:22px;font-size:1.15rem;color:var(--muted);max-width:44ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:28px;padding:0;list-style:none;font-size:.9rem;font-weight:600;color:var(--muted)}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust svg{width:18px;height:18px;color:var(--brand);flex:none}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero{padding-top:36px}}
 
 /* Slider */
-.slider{border-radius:var(--r-lg);overflow:hidden;background:var(--panel);color:var(--on-panel)}
-.viewport{position:relative;overflow:hidden;aspect-ratio:4/3;touch-action:pan-y}
-.track{display:flex;height:100%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.slider{position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--brand);color:var(--on-brand);box-shadow:var(--shadow)}
+.viewport{position:relative;overflow:hidden;aspect-ratio:5/4;touch-action:pan-y}
+.track{display:flex;height:100%;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
 .slide{flex:0 0 100%;height:100%;position:relative;margin:0}
-.slide img{width:100%;height:100%;object-fit:cover}
-.ph{width:100%;height:100%;display:grid;place-items:center;align-content:center;gap:14px;
-  background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.04) 22px 44px),var(--panel)}
-.ph svg{width:96px;height:96px;stroke:var(--yolk);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.ph span{font-size:.85rem;color:var(--panel-muted)}
-.caption{position:absolute;left:0;right:0;bottom:0;padding:56px 24px 20px;background:linear-gradient(to top,rgba(10,22,33,.88),rgba(10,22,33,0));color:#fff}
-.caption h3{font-size:1.5rem}
-.caption p{margin-top:4px;max-width:46ch;font-size:.95rem;color:#DCE5EC}
+.slide img,.pmedia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph{width:100%;height:100%;display:grid;place-items:center;align-content:center;gap:14px;text-align:center;padding:20px;
+  background:radial-gradient(80% 80% at 50% 35%,rgba(224,162,27,.14),transparent 70%),repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 44px),var(--brand)}
+.ph svg{width:84px;height:84px;stroke:var(--accent);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.ph span{font-size:.82rem;color:var(--on-brand-muted)}
+.caption{position:absolute;left:0;right:0;bottom:0;padding:72px 28px 24px;background:linear-gradient(to top,rgba(10,24,17,.9),rgba(10,24,17,0));color:#fff}
+.caption .n{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.caption h3{font-size:1.7rem;margin-top:6px}
+.caption p{margin-top:6px;max-width:44ch;font-size:.95rem;color:#DDE6E0}
 .tabs{display:grid;grid-template-columns:repeat(4,1fr)}
-.tab{position:relative;background:none;border:0;color:var(--panel-muted);font:inherit;text-align:left;padding:14px 16px 16px;cursor:pointer;min-height:56px;border-top:1px solid rgba(255,255,255,.12)}
+.tab{position:relative;background:none;border:0;color:var(--on-brand-muted);font:inherit;text-align:left;padding:14px 18px 16px;cursor:pointer;min-height:56px;border-top:1px solid rgba(255,255,255,.12)}
 .tab+.tab{border-left:1px solid rgba(255,255,255,.12)}
-.tab b{display:block;font-family:var(--display);font-size:1.1rem;color:var(--on-panel)}
+.tab b{display:block;font-family:var(--display);font-size:1.05rem;color:var(--on-brand)}
 .tab small{font-size:.8rem;line-height:1.3;display:block}
-.tab[aria-selected="true"] small{color:var(--on-panel)}
-.bar{position:absolute;left:0;top:-1px;height:3px;width:0;background:var(--yolk)}
+.tab[aria-selected="true"]{background:rgba(255,255,255,.05)}
+.tab[aria-selected="true"] small{color:var(--on-brand)}
+.bar{position:absolute;left:0;top:-1px;height:3px;width:0;background:var(--accent)}
 .tab[aria-selected="true"] .bar{animation:fill 6s linear forwards}
 .slider.paused .tab[aria-selected="true"] .bar{animation-play-state:paused}
 @keyframes fill{to{width:100%}}
 @media (max-width:560px){.tab small{display:none}.tab{text-align:center;padding:12px 6px}}
 @media (prefers-reduced-motion:reduce){.track{transition:none}.tab[aria-selected="true"] .bar{animation:none;width:100%}}
 
-/* Facts */
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border-top:2px solid var(--ink)}
-.fact{padding:20px 24px 4px 0}
-.fact+.fact{padding-left:24px;border-left:1px solid var(--line)}
-.fact h3{font-size:1.25rem}
-.fact p{color:var(--muted);margin-top:4px;font-size:.95rem}
-@media (max-width:760px){.facts{grid-template-columns:1fr}.fact,.fact+.fact{padding:16px 0;border-left:0;border-bottom:1px solid var(--line)}}
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.stat{padding:24px 26px}
+.stat+.stat{border-left:1px solid var(--line)}
+.stat strong{display:block;font-family:var(--display);font-size:clamp(1.9rem,3.2vw,2.6rem);font-weight:600;line-height:1;color:var(--brand)}
+.stat strong small{font-size:.5em;font-weight:600;margin-left:2px}
+.stat>span{display:block;margin-top:8px;font-size:.9rem;color:var(--muted)}
+:root[data-theme="dark"] .stat strong{color:var(--accent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stat strong{color:var(--accent)}}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
 
 /* Sections */
-section.block{padding:72px 0}
-.block-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:32px}
-.block-head h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;max-width:18ch}
-.block-head p{color:var(--muted);max-width:44ch}
+section.block{padding:96px 0}
+.block-head{display:grid;grid-template-columns:1fr 1fr;gap:24px 56px;align-items:end;margin-bottom:44px}
+.block-head h2{font-size:clamp(2.1rem,4.2vw,3.3rem);margin-top:14px}
+.block-head p{color:var(--muted);font-size:1.05rem;max-width:48ch}
+@media (max-width:860px){.block-head{grid-template-columns:1fr}section.block{padding:72px 0}}
 
-/* Order area */
-.order-grid{display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:start}
-@media (max-width:980px){.order-grid{grid-template-columns:1fr}}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
-@media (max-width:620px){.products{grid-template-columns:1fr}}
-.product{background:var(--surface);padding:20px;display:flex;flex-direction:column;gap:10px}
-.product.picked{box-shadow:inset 4px 0 0 var(--yolk)}
-.product h3{font-size:1.2rem}
-.product .desc{color:var(--muted);font-size:.92rem;flex:1}
-.product .price{font-weight:700;font-size:.92rem}
+/* Segments */
+.segs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.seg{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;display:flex;flex-direction:column;gap:12px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s}
+.seg:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.seg-ic{width:52px;height:52px;border-radius:14px;background:var(--bg-2);display:grid;place-items:center;color:var(--brand)}
+.seg-ic svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+:root[data-theme="dark"] .seg-ic{color:var(--accent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .seg-ic{color:var(--accent)}}
+.seg h3{font-size:1.35rem}
+.seg p{color:var(--muted);font-size:.94rem;flex:1}
+.seg a{font-weight:700;font-size:.92rem;text-decoration:none;display:inline-flex;align-items:center;gap:6px;color:var(--brand);background:none;border:0;padding:0;cursor:pointer;font-family:inherit}
+:root[data-theme="dark"] .seg a{color:var(--accent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .seg a{color:var(--accent)}}
+.seg a span{transition:transform .2s}
+.seg a:hover span{transform:translateX(4px)}
+@media (max-width:980px){.segs{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.segs{grid-template-columns:1fr}}
+
+/* Bulk quote */
+.quote{background:var(--brand);color:var(--on-brand);border-radius:var(--r-lg);padding:56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;position:relative;overflow:hidden}
+.quote::after{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-220px;border-radius:50%;background:radial-gradient(circle,rgba(224,162,27,.22),transparent 65%);pointer-events:none}
+.quote h2{font-size:clamp(2.1rem,4vw,3.2rem);margin-top:14px}
+.quote h2 em{font-style:italic;color:var(--accent)}
+.quote .intro{color:var(--on-brand-muted);margin-top:18px;max-width:42ch;font-size:1.05rem}
+.perks{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px}
+.perks li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.perks svg{width:22px;height:22px;color:var(--accent);margin-top:2px}
+.perks b{display:block}
+.perks span{color:var(--on-brand-muted);font-size:.92rem}
+.qform{position:relative;z-index:1;background:var(--surface);color:var(--ink);border-radius:var(--r);padding:28px;display:grid;gap:16px;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.qform h3{font-size:1.45rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+.fld{display:grid;gap:6px;font-size:.84rem;font-weight:600}
+.fld>span{color:var(--ink)}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:1rem;font-weight:500;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:10px 12px;min-height:46px;width:100%;transition:border-color .2s,box-shadow .2s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 18%,transparent)}
+.fld textarea{resize:vertical;min-height:72px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{font-size:.84rem;font-weight:600;padding:0;margin-bottom:8px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.pill span{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg);font-size:.88rem;font-weight:600;transition:all .15s}
+.pill input:checked+span{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+.pill input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
+.kgrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.kgrow .fld{flex:1 1 140px}
+.qchips{display:flex;gap:6px;flex-wrap:wrap}
+.qchip{min-height:38px;padding:0 12px;border-radius:999px;border:1px dashed var(--line);background:none;color:var(--ink);font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+.qchip:hover{border-style:solid;border-color:var(--brand)}
+.vol{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border-radius:var(--r-sm);background:var(--bg-2)}
+.vol span{font-size:.85rem;color:var(--muted)}
+.vol strong{font-family:var(--display);font-size:1.5rem;font-weight:600}
+.qform .btn{width:100%}
+.fine{font-size:.8rem;color:var(--muted)}
+@media (max-width:980px){.quote{grid-template-columns:1fr;padding:36px 24px;gap:36px}}
+@media (max-width:420px){.quote{padding:28px 16px}.qform{padding:20px}}
+
+/* Products */
+.order-grid{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
+@media (max-width:1040px){.order-grid{grid-template-columns:1fr}}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:1180px){.products{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.products{grid-template-columns:1fr}}
+.product{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+.product:hover{box-shadow:var(--shadow)}
+.product.picked{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand)}
+.pmedia{position:relative;aspect-ratio:16/10;background:var(--brand);overflow:hidden}
+.pmedia img{transition:transform .5s ease}
+.product:hover .pmedia img{transform:scale(1.04)}
+.pmedia .ph svg{width:52px;height:52px}
+.pmedia .ph span{font-size:.75rem}
+.badge{position:absolute;top:12px;left:12px;background:var(--accent);color:var(--on-accent);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:999px;display:none}
+.product.picked .badge{display:block}
+.pbody{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.product h3{font-size:1.25rem}
+.product .desc{color:var(--muted);font-size:.9rem;flex:1}
+.product .price{font-weight:700;font-size:.9rem}
 .product .price.ask{color:var(--muted);font-weight:500}
-.stepper{display:flex;align-items:center;gap:0;border:1px solid var(--line);border-radius:999px;width:max-content}
-.stepper button{width:44px;height:44px;border:0;background:none;color:var(--ink);font-size:1.3rem;cursor:pointer;border-radius:50%}
-.stepper button:hover{background:var(--bg)}
-.stepper label{display:flex;align-items:center;gap:4px;padding:0 4px;font-weight:600}
-.stepper input{width:52px;border:0;background:none;color:var(--ink);font:inherit;font-weight:700;text-align:right;-moz-appearance:textfield}
+.pctl{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:6px}
+.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+.stepper button{width:42px;height:42px;border:0;background:none;color:var(--ink);font-size:1.25rem;cursor:pointer;border-radius:50%}
+.stepper button:hover{background:var(--bg-2)}
+.stepper label{display:flex;align-items:center;gap:4px;padding:0 2px;font-weight:600;font-size:.9rem}
+.stepper input{width:46px;border:0;background:none;color:var(--ink);font:inherit;font-weight:700;text-align:right;-moz-appearance:textfield}
 .stepper input::-webkit-outer-spin-button,.stepper input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.adds{display:flex;gap:4px}
+.adds button{min-height:34px;padding:0 9px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--muted);font:inherit;font-size:.78rem;font-weight:700;cursor:pointer}
+.adds button:hover{color:var(--ink);border-color:var(--ink)}
 
-.summary{position:sticky;top:calc(env(safe-area-inset-top,0px) + 88px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px}
-.summary h3{font-size:1.4rem}
-.lines{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:6px;font-size:.95rem}
-.lines li{display:flex;justify-content:space-between;gap:12px}
-.lines .empty{color:var(--muted)}
+.summary{position:sticky;top:96px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow)}
+.summary h3{font-size:1.5rem}
+.lines{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px;font-size:.94rem}
+.lines li{display:flex;justify-content:space-between;gap:12px;padding-bottom:8px;border-bottom:1px dashed var(--line)}
+.lines .empty{color:var(--muted);border:0}
 .scale{margin-top:20px}
-.scale-top{display:flex;justify-content:space-between;align-items:baseline}
-.scale-top strong{font-family:var(--display);font-size:2.4rem;font-weight:800;line-height:1}
-.scale-top span{color:var(--muted);font-size:.9rem}
-.meter{position:relative;height:14px;border-radius:999px;background:var(--bg);margin-top:10px;overflow:hidden;border:1px solid var(--line)}
-.meter i{position:absolute;inset:0 auto 0 0;width:0;background:var(--yolk);transition:width .35s ease}
-.scale-note{margin-top:8px;font-size:.9rem;font-weight:600}
-.est{margin-top:6px;font-size:.88rem;color:var(--muted)}
-.fields{display:grid;gap:12px;margin-top:20px}
-.fields label{display:grid;gap:4px;font-size:.85rem;font-weight:600}
-.fields input,.fields select,.fields textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:10px 12px;min-height:44px;width:100%}
-.fields textarea{resize:vertical;min-height:72px}
-.summary .btn{width:100%;margin-top:18px}
-.fine{margin-top:10px;font-size:.8rem;color:var(--muted)}
+.scale-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.scale-top strong{font-family:var(--display);font-size:2.5rem;font-weight:600;line-height:1}
+.scale-top span{color:var(--muted);font-size:.86rem;text-align:right}
+.meter{position:relative;height:10px;border-radius:999px;background:var(--bg-2);margin-top:12px;overflow:hidden}
+.meter i{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,var(--brand),var(--accent));border-radius:999px;transition:width .4s ease}
+.scale-note{margin-top:10px;font-size:.9rem;font-weight:600}
+.est{margin-top:6px;font-size:.86rem;color:var(--muted)}
+.summary .fields{display:grid;gap:12px;margin-top:20px}
+.summary .btn{width:100%;margin-top:18px;padding:0 16px}
+.summary .fine{margin-top:10px}
 
 /* Steps */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;counter-reset:s;list-style:none;padding:0;margin:0}
-.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:16px}
-.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:2.8rem;line-height:1;color:var(--yolk);display:block;margin-bottom:10px}
-.steps h3{font-size:1.2rem}
-.steps p{color:var(--muted);margin-top:6px}
-@media (max-width:760px){.steps{grid-template-columns:1fr;gap:24px}}
-
-/* Bulk */
-.bulk{background:var(--panel);color:var(--on-panel);border-radius:var(--r-lg);padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.bulk h2{font-size:clamp(2rem,4vw,3rem);font-weight:800}
-.bulk p{color:var(--panel-muted);margin-top:14px;max-width:40ch}
-.bulk ul{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.bulk li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.14);font-weight:600;font-size:1.05rem;display:flex;justify-content:space-between;gap:12px}
-.bulk li span{color:var(--panel-muted);font-weight:400;font-size:.92rem;text-align:right}
-.bulk .btn{margin-top:24px}
-@media (max-width:820px){.bulk{grid-template-columns:1fr;padding:28px}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px}
+.steps li::before{content:"0" counter(s);font-family:var(--display);font-weight:600;font-size:2.6rem;line-height:1;color:var(--accent);display:block;margin-bottom:18px}
+.steps h3{font-size:1.3rem}
+.steps p{color:var(--muted);margin-top:8px;font-size:.95rem}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
 
 /* Area */
-.areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-.areas li{list-style:none;padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-weight:600}
+.area-card{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.area-l{padding:44px}
+.area-l h2{font-size:clamp(2rem,3.6vw,2.8rem);margin-top:14px}
+.area-l p{color:var(--muted);margin-top:16px;max-width:44ch}
+.areas{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0;padding:0;list-style:none}
+.areas li{padding:9px 16px;border-radius:999px;background:var(--bg-2);font-weight:600;font-size:.92rem}
+.area-r{background:var(--brand);color:var(--on-brand);padding:44px;display:grid;align-content:center;gap:22px;position:relative;overflow:hidden}
+.area-r::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(224,162,27,.18),transparent 55%),repeating-radial-gradient(circle at 80% 20%,transparent 0 38px,rgba(255,255,255,.05) 38px 39px);pointer-events:none}
+.area-r>*{position:relative}
+.area-r .big{font-family:var(--display);font-size:clamp(3.4rem,7vw,5.4rem);font-weight:600;line-height:.95;color:var(--accent)}
+.area-r .big small{font-size:.4em;color:var(--on-brand);margin-left:6px}
+.area-r p{color:var(--on-brand-muted);max-width:36ch}
+@media (max-width:860px){.area-card{grid-template-columns:1fr}.area-l,.area-r{padding:28px 22px}}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:860px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:0 22px}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-weight:700;font-size:1.02rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);font-size:1.6rem;line-height:1;color:var(--accent);transition:transform .2s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);padding:0 0 20px;max-width:68ch}
+
+/* Final CTA */
+.cta{text-align:center;padding:72px 24px;border-radius:var(--r-lg);background:var(--brand);color:var(--on-brand);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 50% 0%,rgba(224,162,27,.22),transparent 70%);pointer-events:none}
+.cta>*{position:relative}
+.cta h2{font-size:clamp(2.1rem,4.6vw,3.6rem);max-width:20ch;margin:14px auto 0}
+.cta h2 em{font-style:italic;color:var(--accent)}
+.cta p{color:var(--on-brand-muted);margin:16px auto 0;max-width:48ch}
+.cta .hero-actions{justify-content:center}
 
 /* Footer */
-footer{border-top:1px solid var(--line);padding:40px 0 120px}
-.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
-.foot h4{margin:0 0 6px;font-size:.9rem;color:var(--muted);font-weight:600}
-@media (max-width:760px){.foot{grid-template-columns:1fr}}
+footer{padding:64px 0 120px;margin-top:96px;border-top:1px solid var(--line)}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.foot h4{margin:0 0 10px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.foot p,.foot a{font-size:.95rem}
+.foot nav{display:grid;gap:6px}
+.foot nav a{text-decoration:none;color:var(--muted)}
+.foot nav a:hover{color:var(--ink)}
+.copy{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+@media (max-width:860px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
+@media (max-width:480px){.foot{grid-template-columns:1fr}}
 
 /* Floating + mobile bar */
-.fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.28);transition:transform .2s}
+.fab:hover{transform:scale(1.06)}
 .fab svg{width:30px;height:30px}
-.mbar{position:fixed;left:0;right:0;bottom:0;z-index:31;background:var(--panel);color:var(--on-panel);padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));display:none;align-items:center;justify-content:space-between;gap:12px}
-.mbar strong{font-family:var(--display);font-size:1.3rem}
-.mbar small{display:block;color:var(--panel-muted);font-size:.8rem}
-.mbar .btn{min-height:44px;background:var(--yolk);color:var(--on-yolk)}
-@media (max-width:980px){body.has-cart .mbar{display:flex}body.has-cart .fab{display:none}}
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:31;background:var(--brand);color:var(--on-brand);padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));display:none;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -8px 24px rgba(0,0,0,.18)}
+.mbar strong{font-family:var(--display);font-size:1.35rem}
+.mbar small{display:block;color:var(--on-brand-muted);font-size:.78rem}
+.mbar .btn{min-height:44px}
+@media (max-width:1040px){body.has-cart .mbar{display:flex}body.has-cart .fab{display:none}}
 
 .toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:var(--r-sm);font-size:.92rem;z-index:40;max-width:min(92vw,440px);display:none}
 .toast.show{display:block}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Reveal on scroll (hanya jika JS aktif) */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add("js")</script>
 
-<header class="site-head">
+<div class="topbar">
+  <div class="wrap">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h11v10H2zM13 9h5l3 3v4h-8"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Gratis ongkir se-Jabodetabek mulai <b><span data-bind="minKg">50</span> kg</b></span>
+    <span class="hide-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Buka <span data-bind="jamBuka">setiap hari</span></span>
+  </div>
+</div>
+
+<header class="site-head" id="head">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Beranda">
       <span class="brand-mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3.5 0-6 3.2-6 7.5S8.5 21 12 21s6-6.2 6-10.5S15.5 3 12 3z"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-3.5 0-6 3.2-6 7.5S8.5 21 12 21s6-6.2 6-10.5S15.5 3 12 3z"/></svg>
       </span>
-      <span data-bind="namaUsaha">Nama Usaha</span>
+      <span><span class="brand-name" data-bind="namaUsaha">Asyifa Jaya</span><span class="brand-sub">Pemasok ayam potong</span></span>
     </a>
     <nav class="nav" aria-label="Navigasi utama">
+      <a href="#mitra">Untuk usaha</a>
+      <a href="#penawaran">Harga partai</a>
       <a href="#produk">Produk</a>
-      <a href="#partai">Partai besar</a>
       <a href="#pengiriman">Pengiriman</a>
-      <a href="#kontak">Kontak</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-wa head-cta" data-wa href="#">
+    <a class="btn btn-wa head-cta" data-wa href="#" aria-label="Chat WhatsApp">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.3 2.2 2.2 0 00.1-1.3c0-.1-.2-.2-.5-.3z"/></svg>
-      WhatsApp
+      <span>WhatsApp</span>
     </a>
   </div>
 </header>
 
 <main id="top">
-  <!-- HERO + SLIDER -->
+  <!-- HERO -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <h1>Ayam segar untuk dapur rumah sampai dapur usaha.</h1>
-          <p class="lede">Ayam utuh dan potongan, eceran maupun partai besar. Gratis ongkir se-Jabodetabek untuk pesanan minimal <span data-bind="minKg">50</span> kg.</p>
+          <span class="eyebrow">Pemasok ayam partai besar · Jabodetabek</span>
+          <h1>Ayam segar untuk <em class="hl">dapur usaha</em> Anda.</h1>
+          <p class="lede">Ayam utuh dan potongan dalam partai besar untuk restoran, katering, hotel, dan reseller. Dipotong sesuai spesifikasi, dikirim sesuai jadwal Anda.</p>
           <div class="hero-actions">
-            <a class="btn btn-wa" href="#produk">Susun pesanan</a>
-            <a class="btn btn-ghost" data-wa href="#">Tanya lewat WhatsApp</a>
+            <a class="btn btn-primary" href="#penawaran">Minta harga partai
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-ghost" href="#produk">Lihat produk</a>
           </div>
+          <ul class="trust">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Pengiriman terjadwal</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Potong sesuai pesanan</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Konfirmasi langsung via WhatsApp</li>
+          </ul>
         </div>
 
         <div class="slider" id="slider" aria-roledescription="carousel" aria-label="Proses kami">
@@ -230,20 +388,105 @@ footer{border-top:1px solid var(--line);padding:40px 0 120px}
         </div>
       </div>
 
-      <div class="facts">
-        <div class="fact"><h3>Gratis ongkir Jabodetabek</h3><p>Untuk pesanan minimal <span data-bind="minKg">50</span> kg dalam satu pengiriman.</p></div>
-        <div class="fact"><h3>Melayani partai besar</h3><p>Restoran, katering, hotel, dan reseller. Bisa dijadwalkan rutin.</p></div>
-        <div class="fact"><h3>Utuh atau potongan</h3><p>Dipotong sesuai kebutuhan dapur Anda.</p></div>
+      <div class="stats rv">
+        <div class="stat"><strong><span data-bind="minKg">50</span><small>kg</small></strong><span>Minimum gratis ongkir Jabodetabek</span></div>
+        <div class="stat"><strong data-bind="jumlahKota">5</strong><span>Kota tujuan pengiriman</span></div>
+        <div class="stat"><strong data-bind="jumlahProduk">10</strong><span>Jenis produk utuh &amp; potongan</span></div>
+        <div class="stat"><strong>7<small>hari</small></strong><span>Buka setiap hari</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMEN -->
+  <section class="block" id="mitra" style="padding-top:56px">
+    <div class="wrap">
+      <div class="block-head rv">
+        <div>
+          <span class="eyebrow">Untuk usaha</span>
+          <h2>Dipasok sesuai cara dapur Anda bekerja.</h2>
+        </div>
+        <p>Setiap jenis usaha punya kebutuhan potongan, volume, dan jadwal yang berbeda. Sampaikan spesifikasinya, kami siapkan sesuai pesanan.</p>
+      </div>
+      <div class="segs" id="segs"></div>
+    </div>
+  </section>
+
+  <!-- PENAWARAN PARTAI BESAR -->
+  <section class="block" id="penawaran" style="padding-top:0">
+    <div class="wrap">
+      <div class="quote on-dark rv">
+        <div>
+          <span class="eyebrow">Harga partai</span>
+          <h2>Minta penawaran <em>partai besar</em>.</h2>
+          <p class="intro">Isi kebutuhan rutin usaha Anda. Formulir ini menyusun pesan WhatsApp lengkap, lalu kami balas dengan harga partai dan jadwal kirim.</p>
+          <ul class="perks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+              <div><b>Jadwal kirim tetap</b><span>Harian, mingguan, atau sesuai kebutuhan produksi.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l8-8M12 12l7-7a2.1 2.1 0 013 3l-7 7-3-3z"/></svg>
+              <div><b>Potongan sesuai spesifikasi</b><span>Utuh, potong 4/8, per bagian, atau fillet.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h11v10H2zM13 9h5l3 3v4h-8"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+              <div><b>Gratis ongkir mulai <span data-bind="minKg">50</span> kg</b><span>Ke seluruh Jakarta, Bogor, Depok, Tangerang, Bekasi.</span></div></li>
+          </ul>
+        </div>
+
+        <form class="qform" id="qform" novalidate>
+          <h3>Kebutuhan usaha Anda</h3>
+          <div class="row2">
+            <label class="fld"><span>Nama usaha</span><input id="qNama" autocomplete="organization" placeholder="mis. RM Sederhana"></label>
+            <label class="fld"><span>Jenis usaha</span>
+              <select id="qJenis">
+                <option>Restoran / rumah makan</option>
+                <option>Katering / dapur produksi</option>
+                <option>Hotel</option>
+                <option>Reseller / pedagang</option>
+                <option>Lainnya</option>
+              </select>
+            </label>
+          </div>
+          <div class="kgrow">
+            <label class="fld"><span>Kebutuhan per pengiriman (kg)</span><input id="qKg" type="number" inputmode="decimal" min="0" step="1" placeholder="mis. 100"></label>
+            <div class="qchips" aria-label="Isi cepat">
+              <button type="button" class="qchip" data-kg="50">50</button>
+              <button type="button" class="qchip" data-kg="100">100</button>
+              <button type="button" class="qchip" data-kg="250">250</button>
+              <button type="button" class="qchip" data-kg="500">500</button>
+            </div>
+          </div>
+          <fieldset>
+            <legend>Frekuensi pengiriman</legend>
+            <div class="pills" id="qFrek"></div>
+          </fieldset>
+          <fieldset>
+            <legend>Produk yang dibutuhkan</legend>
+            <div class="pills" id="qProduk"></div>
+          </fieldset>
+          <div class="row2">
+            <label class="fld"><span>Area pengiriman</span>
+              <select id="qArea"></select>
+            </label>
+            <label class="fld"><span>Mulai kirim</span><input id="qMulai" type="date"></label>
+          </div>
+          <label class="fld"><span>Spesifikasi / catatan</span><textarea id="qCatatan" placeholder="mis. potong 8, ukuran 0,9–1,1 kg/ekor, kirim pagi"></textarea></label>
+          <div class="vol" aria-live="polite"><span id="volLabel">Perkiraan volume</span><strong id="volVal">—</strong></div>
+          <button class="btn btn-wa" type="submit">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+            Kirim permintaan via WhatsApp
+          </button>
+          <p class="fine">Harga partai dan ketersediaan dikonfirmasi langsung oleh tim kami di WhatsApp.</p>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- PRODUK + PESANAN -->
-  <section class="block" id="produk">
+  <section class="block" id="produk" style="padding-top:24px">
     <div class="wrap">
-      <div class="block-head">
-        <h2>Pilih produk dan beratnya</h2>
-        <p>Atur jumlah per kilogram, lalu kirim daftar pesanan langsung ke WhatsApp kami. Harga dan jadwal kirim kami konfirmasi di sana.</p>
+      <div class="block-head rv">
+        <div>
+          <span class="eyebrow">Katalog</span>
+          <h2>Pesan langsung per kilogram.</h2>
+        </div>
+        <p>Untuk pesanan sekali kirim: atur berat tiap produk, lalu kirim daftar pesanan ke WhatsApp. Harga dan jadwal kami konfirmasi di sana.</p>
       </div>
       <div class="order-grid">
         <div class="products" id="products"></div>
@@ -253,32 +496,25 @@ footer{border-top:1px solid var(--line);padding:40px 0 120px}
           <ul class="lines" id="lines"><li class="empty">Belum ada produk dipilih.</li></ul>
 
           <div class="scale">
-            <div class="scale-top"><strong id="totalKg">0 kg</strong><span>dari <span data-bind="minKg">50</span> kg gratis ongkir</span></div>
+            <div class="scale-top"><strong id="totalKg">0 kg</strong><span>target <span data-bind="minKg">50</span> kg<br>gratis ongkir</span></div>
             <div class="meter" role="progressbar" aria-label="Menuju gratis ongkir" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="meter"><i id="meterFill"></i></div>
             <p class="scale-note" id="scaleNote" aria-live="polite">Tambahkan produk untuk mulai.</p>
             <p class="est" id="est" hidden></p>
           </div>
 
           <div class="fields">
-            <label>Nama / nama usaha<input id="fNama" autocomplete="name"></label>
-            <label>Area pengiriman
-              <select id="fArea">
-                <option>Jakarta</option><option>Bogor</option><option>Depok</option>
-                <option>Tangerang</option><option>Bekasi</option>
-                <option value="luar">Luar Jabodetabek</option>
-                <option value="ambil">Ambil sendiri di gerai</option>
-              </select>
-            </label>
-            <label>Alamat lengkap<textarea id="fAlamat" autocomplete="street-address"></textarea></label>
-            <label>Tanggal kirim / ambil<input id="fTanggal" type="date"></label>
-            <label>Catatan (cara potong, ukuran, dll.)<textarea id="fCatatan"></textarea></label>
+            <label class="fld"><span>Nama / nama usaha</span><input id="fNama" autocomplete="name"></label>
+            <label class="fld"><span>Area pengiriman</span><select id="fArea"></select></label>
+            <label class="fld"><span>Alamat lengkap</span><textarea id="fAlamat" autocomplete="street-address"></textarea></label>
+            <label class="fld"><span>Tanggal kirim / ambil</span><input id="fTanggal" type="date"></label>
+            <label class="fld"><span>Catatan (cara potong, ukuran, dll.)</span><textarea id="fCatatan"></textarea></label>
           </div>
 
           <button class="btn btn-wa" id="sendOrder" type="button">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
             Kirim pesanan ke WhatsApp
           </button>
-          <p class="fine">Pesanan baru tercatat setelah kami membalas dan mengonfirmasi di WhatsApp.</p>
+          <p class="fine">Pesanan tercatat setelah kami membalas dan mengonfirmasi di WhatsApp.</p>
         </aside>
       </div>
     </div>
@@ -287,57 +523,91 @@ footer{border-top:1px solid var(--line);padding:40px 0 120px}
   <!-- CARA PESAN -->
   <section class="block" style="padding-top:0">
     <div class="wrap">
-      <div class="block-head"><h2>Cara pesan</h2></div>
-      <ol class="steps">
-        <li><h3>Pilih produk</h3><p>Tentukan potongan dan berat yang dibutuhkan di daftar produk.</p></li>
-        <li><h3>Isi alamat dan tanggal</h3><p>Pilih area pengiriman atau ambil sendiri di gerai.</p></li>
-        <li><h3>Kirim ke WhatsApp</h3><p>Kami balas dengan konfirmasi harga, total, dan jadwal pengiriman.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- PARTAI BESAR -->
-  <section class="block" id="partai" style="padding-top:0">
-    <div class="wrap">
-      <div class="bulk">
+      <div class="block-head rv">
         <div>
-          <h2>Kebutuhan rutin? Kami siap pasok.</h2>
-          <p>Untuk usaha dengan kebutuhan harian atau mingguan, pengiriman bisa dijadwalkan tetap. Hubungi kami untuk harga partai.</p>
-          <a class="btn btn-wa" data-wa data-wa-msg="partai" href="#">Minta penawaran partai besar</a>
+          <span class="eyebrow">Alur</span>
+          <h2>Tiga langkah, tanpa ribet.</h2>
         </div>
-        <ul>
-          <li>Restoran &amp; rumah makan <span>Potongan seragam per porsi</span></li>
-          <li>Katering &amp; dapur produksi <span>Volume besar, jadwal tetap</span></li>
-          <li>Hotel <span>Fillet dan potongan khusus</span></li>
-          <li>Reseller &amp; pedagang <span>Harga partai</span></li>
-        </ul>
       </div>
+      <ol class="steps">
+        <li class="rv"><h3>Sampaikan kebutuhan</h3><p>Pilih produk, berat, dan jadwal lewat formulir penawaran atau katalog di atas.</p></li>
+        <li class="rv"><h3>Terima konfirmasi</h3><p>Kami balas di WhatsApp dengan harga, total, dan jadwal pengiriman.</p></li>
+        <li class="rv"><h3>Ayam dikirim</h3><p>Dikirim ke alamat Anda di Jabodetabek, atau ambil sendiri di gerai.</p></li>
+      </ol>
     </div>
   </section>
 
   <!-- PENGIRIMAN -->
   <section class="block" id="pengiriman" style="padding-top:0">
     <div class="wrap">
-      <div class="block-head">
-        <h2>Area pengiriman</h2>
-        <p>Gratis ongkir untuk pesanan minimal <span data-bind="minKg">50</span> kg ke seluruh Jabodetabek. Di bawah itu, atau di luar area, ongkir kami hitung dan konfirmasi lewat WhatsApp.</p>
+      <div class="area-card rv">
+        <div class="area-l">
+          <span class="eyebrow">Pengiriman</span>
+          <h2>Melayani seluruh Jabodetabek.</h2>
+          <p>Gratis ongkir untuk pesanan minimal <span data-bind="minKg">50</span> kg dalam satu pengiriman. Di bawah itu, atau di luar area, ongkir kami hitung dan konfirmasi lewat WhatsApp.</p>
+          <ul class="areas" id="areas"></ul>
+        </div>
+        <div class="area-r on-dark">
+          <span class="eyebrow">Gratis ongkir</span>
+          <div class="big"><span data-bind="minKg">50</span><small>kg+</small></div>
+          <p>Gerai: <span data-bind="alamatGerai">[Alamat gerai]</span>. Bisa juga ambil sendiri.</p>
+        </div>
       </div>
-      <ul class="areas" style="padding:0;margin:0">
-        <li>Jakarta</li><li>Bogor</li><li>Depok</li><li>Tangerang</li><li>Bekasi</li>
-      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="block-head rv">
+        <div>
+          <span class="eyebrow">FAQ</span>
+          <h2>Pertanyaan yang sering diajukan.</h2>
+        </div>
+      </div>
+      <div class="faq rv">
+        <details><summary>Berapa minimum pesanan untuk gratis ongkir?</summary><p>Minimal <span data-bind="minKg">50</span> kg dalam satu pengiriman, untuk tujuan Jakarta, Bogor, Depok, Tangerang, dan Bekasi.</p></details>
+        <details><summary>Apakah bisa dikirim rutin setiap hari atau setiap minggu?</summary><p>Bisa. Isi formulir penawaran partai besar dengan volume dan frekuensi yang Anda butuhkan, lalu jadwal kirim kami sepakati bersama di WhatsApp.</p></details>
+        <details><summary>Bisa dipotong sesuai permintaan?</summary><p>Bisa: utuh, potong 4, potong 8, per bagian, atau fillet. Tulis spesifikasinya (ukuran ekor, cara potong) di kolom catatan.</p></details>
+        <details><summary>Bagaimana dengan harga?</summary><p>Harga mengikuti kondisi pasar dan volume pesanan, sehingga kami konfirmasi langsung lewat WhatsApp sebelum pesanan diproses.</p></details>
+        <details><summary>Bagaimana jika lokasi saya di luar Jabodetabek?</summary><p>Tetap bisa dikirim. Ongkos kirim dihitung terpisah dan dikonfirmasi lewat WhatsApp.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA AKHIR -->
+  <section style="padding:0">
+    <div class="wrap">
+      <div class="cta on-dark rv">
+        <span class="eyebrow">Mulai sekarang</span>
+        <h2>Siap memasok <em>dapur usaha</em> Anda.</h2>
+        <p>Ceritakan volume dan jadwal yang Anda butuhkan. Kami balas dengan penawaran.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="#penawaran">Minta harga partai</a>
+          <a class="btn btn-ghost-light" data-wa data-wa-msg="partai" href="#">Chat WhatsApp</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
 <footer id="kontak">
-  <div class="wrap foot">
-    <div>
-      <a class="brand" href="#top"><span data-bind="namaUsaha">Nama Usaha</span></a>
-      <p style="color:var(--muted);margin-top:8px;max-width:40ch">Ayam utuh dan potongan untuk rumah tangga dan usaha di Jabodetabek.</p>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-3.5 0-6 3.2-6 7.5S8.5 21 12 21s6-6.2 6-10.5S15.5 3 12 3z"/></svg></span>
+          <span class="brand-name" data-bind="namaUsaha">Asyifa Jaya</span>
+        </a>
+        <p style="color:var(--muted);margin-top:14px;max-width:38ch">Ayam utuh dan potongan untuk usaha dan rumah tangga di Jabodetabek.</p>
+      </div>
+      <div><h4>Gerai</h4><p data-bind="alamatGerai">[Alamat gerai]</p></div>
+      <div><h4>Jam buka</h4><p data-bind="jamBuka">[Jam operasional]</p>
+        <p style="margin-top:10px"><a data-wa href="#" style="font-weight:700">Chat WhatsApp →</a></p></div>
+      <div><h4>Menu</h4>
+        <nav aria-label="Navigasi bawah"><a href="#mitra">Untuk usaha</a><a href="#penawaran">Harga partai</a><a href="#produk">Produk</a><a href="#faq">FAQ</a></nav></div>
     </div>
-    <div><h4>Gerai</h4><p data-bind="alamatGerai">[Alamat gerai]</p></div>
-    <div><h4>Jam buka</h4><p data-bind="jamBuka">[Jam operasional]</p>
-      <p style="margin-top:10px"><a data-wa href="#" style="font-weight:700">Chat WhatsApp</a></p></div>
+    <p class="copy">© <span id="yr"></span> <span data-bind="namaUsaha">Asyifa Jaya</span>. Seluruh harga dan ketersediaan dikonfirmasi via WhatsApp.</p>
   </div>
 </footer>
 
@@ -347,7 +617,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 120px}
 
 <div class="mbar" id="mbar">
   <div><small>Total pesanan</small><strong id="mTotal">0 kg</strong></div>
-  <a class="btn" href="#pesanan">Lihat pesanan</a>
+  <a class="btn btn-accent" href="#pesanan">Lihat pesanan</a>
 </div>
 
 <div class="toast" id="toast" role="status"></div>
@@ -363,27 +633,37 @@ const CONFIG = {
   alamatGerai: "Pasar Kebayoran Lama, Depan Toko Ananda",
   jamBuka: "14.00-23.00 WIB, Setiap Hari",
   minGratisOngkirKg: 50,
+  areaKirim: ["Jakarta", "Bogor", "Depok", "Tangerang", "Bekasi"],
 
-  // foto: isi path/URL gambar (mis. "img/gerai.jpg"). Kosong = placeholder.
+  // FOTO: unggah file ke folder img/ dengan nama persis seperti di bawah.
+  // Jika file belum ada, otomatis tampil placeholder. Lihat img/README.md.
   slides: [
-    { judul: "Gerai kami", teks: "Datang langsung, lihat stok, dan ambil pesanan Anda.", foto: "", ikon: "store" },
-    { judul: "Dari peternakan", teks: "Ayam diangkut dari peternakan ke tempat pemotongan.", foto: "", ikon: "truck" },
-    { judul: "Pemotongan", teks: "Dipotong sesuai pesanan: utuh, per bagian, atau fillet.", foto: "", ikon: "knife" },
-    { judul: "Penyimpanan", teks: "Disimpan di ruang pendingin sampai waktu pengiriman.", foto: "", ikon: "cold" }
+    { judul: "Gerai kami",      teks: "Datang langsung, lihat stok, dan ambil pesanan Anda.",   foto: "img/gerai.jpg",       ikon: "store" },
+    { judul: "Dari peternakan", teks: "Ayam diangkut dari peternakan ke tempat pemotongan.",    foto: "img/peternakan.jpg",  ikon: "truck" },
+    { judul: "Pemotongan",      teks: "Dipotong sesuai pesanan: utuh, per bagian, atau fillet.", foto: "img/pemotongan.jpg",  ikon: "knife" },
+    { judul: "Penyimpanan",     teks: "Disimpan di ruang pendingin sampai waktu pengiriman.",   foto: "img/penyimpanan.jpg", ikon: "cold" }
+  ],
+
+  // Segmen usaha (bagian "Untuk usaha")
+  segmen: [
+    { nama: "Restoran & rumah makan",  ket: "Potongan seragam per porsi agar biaya dan rasa konsisten.", ikon: "resto",  jenis: "Restoran / rumah makan" },
+    { nama: "Katering & dapur produksi", ket: "Volume besar dengan jadwal kirim tetap sesuai produksi.", ikon: "catering", jenis: "Katering / dapur produksi" },
+    { nama: "Hotel",                   ket: "Fillet dan potongan khusus sesuai spesifikasi dapur.",      ikon: "hotel",  jenis: "Hotel" },
+    { nama: "Reseller & pedagang",     ket: "Harga partai untuk dijual kembali, ambil atau dikirim.",    ikon: "shop",   jenis: "Reseller / pedagang" }
   ],
 
   // harga: angka per kg (mis. 38000) atau null = "Harga via WhatsApp"
   produk: [
-    { id: "utuh",   nama: "Ayam utuh (karkas)", ket: "Bisa dipotong 4, 8, atau sesuai permintaan.", harga: null },
-    { id: "dada",   nama: "Dada",               ket: "Dada dengan tulang dan kulit.",              harga: null },
-    { id: "fillet", nama: "Dada fillet",        ket: "Tanpa tulang, dengan atau tanpa kulit.",      harga: null },
-    { id: "pahaa",  nama: "Paha atas",          ket: "Bagian paha atas dengan tulang.",            harga: null },
-    { id: "pahab",  nama: "Paha bawah",         ket: "Drumstick.",                                   harga: null },
-    { id: "sayap",  nama: "Sayap",              ket: "Sayap utuh atau dipotong per ruas.",         harga: null },
-    { id: "ceker",  nama: "Ceker",              ket: "Sudah dibersihkan.",                           harga: null },
-    { id: "ati",    nama: "Ati ampela",         ket: "Jeroan pilihan.",                              harga: null },
-    { id: "kepala", nama: "Kepala & leher",     ket: "Untuk kaldu dan masakan berkuah.",            harga: null },
-    { id: "rangka", nama: "Tulang / rangka",    ket: "Untuk bahan kaldu.",                           harga: null }
+    { id: "utuh",   nama: "Ayam utuh (karkas)", ket: "Bisa dipotong 4, 8, atau sesuai permintaan.", harga: null, foto: "img/produk-utuh.jpg" },
+    { id: "dada",   nama: "Dada",               ket: "Dada dengan tulang dan kulit.",              harga: null, foto: "img/produk-dada.jpg" },
+    { id: "fillet", nama: "Dada fillet",        ket: "Tanpa tulang, dengan atau tanpa kulit.",     harga: null, foto: "img/produk-fillet.jpg" },
+    { id: "pahaa",  nama: "Paha atas",          ket: "Bagian paha atas dengan tulang.",            harga: null, foto: "img/produk-paha-atas.jpg" },
+    { id: "pahab",  nama: "Paha bawah",         ket: "Drumstick.",                                  harga: null, foto: "img/produk-paha-bawah.jpg" },
+    { id: "sayap",  nama: "Sayap",              ket: "Sayap utuh atau dipotong per ruas.",         harga: null, foto: "img/produk-sayap.jpg" },
+    { id: "ceker",  nama: "Ceker",              ket: "Sudah dibersihkan.",                          harga: null, foto: "img/produk-ceker.jpg" },
+    { id: "ati",    nama: "Ati ampela",         ket: "Jeroan pilihan.",                             harga: null, foto: "img/produk-ati-ampela.jpg" },
+    { id: "kepala", nama: "Kepala & leher",     ket: "Untuk kaldu dan masakan berkuah.",           harga: null, foto: "img/produk-kepala-leher.jpg" },
+    { id: "rangka", nama: "Tulang / rangka",    ket: "Untuk bahan kaldu.",                          harga: null, foto: "img/produk-rangka.jpg" }
   ]
 };
 /* ========================================================= */
@@ -392,16 +672,29 @@ const ICONS = {
   store: '<path d="M3 9l1.6-5h14.8L21 9M3 9h18M3 9a3 3 0 006 0 3 3 0 006 0 3 3 0 006 0M5 12v8h14v-8M10 20v-5h4v5"/>',
   truck: '<path d="M2 6h11v10H2zM13 9h5l3 3v4h-8"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>',
   knife: '<path d="M4 20l8-8M12 12l7-7a2.1 2.1 0 013 3l-7 7-3-3z"/><path d="M7 14l3 3"/>',
-  cold:  '<path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10M9 4l3 2 3-2M9 20l3-2 3 2"/>'
+  cold:  '<path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10M9 4l3 2 3-2M9 20l3-2 3 2"/>',
+  drum:  '<path d="M14.5 4.5a5 5 0 017 7c-1.6 1.6-4 2-6 1.2l-4.3 4.3a2 2 0 11-2.8 2.8 2 2 0 01-2.8-2.8 2 2 0 112.8-2.8l4.3-4.3c-.8-2-.4-4.4 1.8-5.4z"/>',
+  resto: '<path d="M7 3v8M5 3v5a2 2 0 004 0V3M7 11v10M17 3c-2 0-3 2.5-3 6h3v12"/>',
+  catering: '<path d="M3 17h18M5 17a7 7 0 0114 0M12 10V8M10 8h4M2 20h20"/>',
+  hotel: '<path d="M3 21V7l9-4 9 4v14M3 21h18M8 21v-4h8v4M8 10h.01M12 10h.01M16 10h.01M8 13.5h.01M12 13.5h.01M16 13.5h.01"/>',
+  shop:  '<path d="M6 7h12l-1 13H7L6 7zM9 7a3 3 0 016 0"/>'
 };
+const FREK = [
+  { v: "sekali", label: "Sekali kirim", perBulan: null },
+  { v: "1w", label: "1x / minggu", perBulan: 52 / 12 },
+  { v: "2w", label: "2x / minggu", perBulan: 104 / 12 },
+  { v: "3w", label: "3x / minggu", perBulan: 156 / 12 },
+  { v: "d",  label: "Setiap hari", perBulan: 365 / 12 }
+];
 
+const $ = id => document.getElementById(id);
 const fmt = n => n.toLocaleString("id-ID", { maximumFractionDigits: 1 });
 const rp  = n => "Rp " + Math.round(n).toLocaleString("id-ID");
 const waValid = () => /^62\d{8,13}$/.test(CONFIG.nomorWA);
 const waUrl = text => "https://wa.me/" + CONFIG.nomorWA + "?text=" + encodeURIComponent(text);
 
 function toast(msg) {
-  const t = document.getElementById("toast");
+  const t = $("toast");
   t.textContent = msg; t.classList.add("show");
   clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), 3500);
 }
@@ -409,13 +702,46 @@ function openWA(text) {
   if (!waValid()) { toast("Nomor WhatsApp belum diatur. Isi CONFIG.nomorWA di kode."); return; }
   window.open(waUrl(text), "_blank", "noopener");
 }
+/* Placeholder + foto di atasnya; jika file foto belum ada, foto dihapus dan placeholder terlihat */
+function media(box, src, alt, icon, label, eager) {
+  const ph = document.createElement("div");
+  ph.className = "ph";
+  ph.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[icon] || ICONS.drum}</svg><span>Foto: ${label}</span>`;
+  box.prepend(ph);
+  if (!src) return;
+  const img = new Image();
+  img.alt = alt; img.loading = eager ? "eager" : "lazy"; img.decoding = "async";
+  img.addEventListener("error", () => img.remove(), { once: true });
+  img.src = src;
+  ph.after(img);
+}
 
 /* Isi teks dari CONFIG */
+const BIND = {
+  minKg: CONFIG.minGratisOngkirKg,
+  jumlahKota: CONFIG.areaKirim.length,
+  jumlahProduk: CONFIG.produk.length
+};
 document.querySelectorAll("[data-bind]").forEach(el => {
   const k = el.dataset.bind;
-  el.textContent = k === "minKg" ? CONFIG.minGratisOngkirKg : CONFIG[k];
+  el.textContent = k in BIND ? BIND[k] : CONFIG[k];
 });
-document.title = CONFIG.namaUsaha + " — Ayam Utuh & Potongan, Partai Besar Jabodetabek";
+document.title = CONFIG.namaUsaha + " — Pemasok Ayam Potong Partai Besar Jabodetabek";
+$("yr").textContent = new Date().getFullYear();
+
+/* Data terstruktur untuk mesin pencari */
+(function () {
+  const s = document.createElement("script");
+  s.type = "application/ld+json";
+  s.textContent = JSON.stringify({
+    "@context": "https://schema.org", "@type": "LocalBusiness",
+    name: CONFIG.namaUsaha, telephone: "+" + CONFIG.nomorWA,
+    address: { "@type": "PostalAddress", streetAddress: CONFIG.alamatGerai, addressLocality: "Jakarta Selatan", addressRegion: "DKI Jakarta", addressCountry: "ID" },
+    areaServed: CONFIG.areaKirim,
+    description: "Pemasok ayam utuh dan potongan, eceran dan partai besar."
+  });
+  document.head.appendChild(s);
+})();
 
 /* Tombol WA umum */
 document.querySelectorAll("[data-wa]").forEach(a => {
@@ -426,11 +752,21 @@ document.querySelectorAll("[data-wa]").forEach(a => {
   a.addEventListener("click", e => { if (!waValid()) { e.preventDefault(); openWA(msg); } });
 });
 
+/* Header bayangan saat scroll */
+const head = $("head");
+const onScroll = () => head.classList.toggle("scrolled", scrollY > 8);
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+/* Area & select */
+$("areas").innerHTML = CONFIG.areaKirim.map(a => `<li>${a}</li>`).join("");
+const areaOpts = CONFIG.areaKirim.map(a => `<option>${a}</option>`).join("")
+  + `<option value="luar">Luar Jabodetabek</option><option value="ambil">Ambil sendiri di gerai</option>`;
+$("fArea").innerHTML = areaOpts;
+$("qArea").innerHTML = areaOpts;
+
 /* ---------- Slider ---------- */
 (function () {
-  const slider = document.getElementById("slider");
-  const track = document.getElementById("track");
-  const tabs = document.getElementById("tabs");
+  const slider = $("slider"), track = $("track"), tabs = $("tabs");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   let i = 0;
 
@@ -440,17 +776,18 @@ document.querySelectorAll("[data-wa]").forEach(a => {
     fig.setAttribute("role", "tabpanel");
     fig.id = "slide-" + n;
     fig.setAttribute("aria-label", s.judul);
-    fig.innerHTML = (s.foto
-      ? `<img src="${s.foto}" alt="${s.judul}" loading="${n ? "lazy" : "eager"}">`
-      : `<div class="ph"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[s.ikon] || ""}</svg><span>Foto: ${s.judul.toLowerCase()}</span></div>`)
-      + `<figcaption class="caption"><h3>${s.judul}</h3><p>${s.teks}</p></figcaption>`;
+    const cap = document.createElement("figcaption");
+    cap.className = "caption";
+    cap.innerHTML = `<span class="n">0${n + 1} / 0${CONFIG.slides.length}</span><h3>${s.judul}</h3><p>${s.teks}</p>`;
+    fig.appendChild(cap);
+    media(fig, s.foto, s.judul, s.ikon, s.judul.toLowerCase(), n === 0);
     track.appendChild(fig);
 
     const b = document.createElement("button");
     b.className = "tab"; b.type = "button";
     b.setAttribute("role", "tab");
     b.setAttribute("aria-controls", fig.id);
-    b.innerHTML = `<span class="bar"></span><b>${n + 1}</b><small>${s.judul}</small>`;
+    b.innerHTML = `<span class="bar"></span><b>0${n + 1}</b><small>${s.judul}</small>`;
     b.addEventListener("click", () => go(n));
     b.querySelector(".bar").addEventListener("animationend", () => go(i + 1));
     tabs.appendChild(b);
@@ -478,7 +815,7 @@ document.querySelectorAll("[data-wa]").forEach(a => {
   document.addEventListener("visibilitychange", () => slider.classList.toggle("paused", document.hidden));
 
   let x0 = null;
-  const vp = document.getElementById("viewport");
+  const vp = $("viewport");
   vp.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, { passive: true });
   vp.addEventListener("touchend", e => {
     if (x0 === null) return;
@@ -491,25 +828,86 @@ document.querySelectorAll("[data-wa]").forEach(a => {
   go(0);
 })();
 
+/* ---------- Segmen ---------- */
+$("segs").innerHTML = CONFIG.segmen.map((s, n) => `
+  <article class="seg rv">
+    <div class="seg-ic"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[s.ikon]}</svg></div>
+    <h3>${s.nama}</h3>
+    <p>${s.ket}</p>
+    <a href="#penawaran" data-seg="${n}">Minta penawaran <span aria-hidden="true">→</span></a>
+  </article>`).join("");
+$("segs").addEventListener("click", e => {
+  const a = e.target.closest("[data-seg]");
+  if (a) $("qJenis").value = CONFIG.segmen[a.dataset.seg].jenis;
+});
+
+/* ---------- Formulir penawaran partai ---------- */
+$("qFrek").innerHTML = FREK.map((f, n) =>
+  `<label class="pill"><input type="radio" name="frek" value="${f.v}" ${n === 1 ? "checked" : ""}><span>${f.label}</span></label>`).join("");
+$("qProduk").innerHTML = CONFIG.produk.map(p =>
+  `<label class="pill"><input type="checkbox" value="${p.id}"><span>${p.nama}</span></label>`).join("");
+
+function qState() {
+  const kg = Math.max(0, parseFloat($("qKg").value) || 0);
+  const f = FREK.find(x => x.v === (document.querySelector('input[name="frek"]:checked') || {}).value) || FREK[0];
+  const produk = [...$("qProduk").querySelectorAll("input:checked")].map(c => CONFIG.produk.find(p => p.id === c.value).nama);
+  return { kg, f, produk, bulan: f.perBulan ? kg * f.perBulan : null };
+}
+function qRender() {
+  const { kg, f, bulan } = qState();
+  $("volLabel").textContent = bulan === null ? "Volume pesanan" : "Perkiraan volume per bulan";
+  $("volVal").textContent = !kg ? "—" : (bulan === null ? fmt(kg) + " kg" : "± " + fmt(Math.round(bulan)) + " kg");
+}
+$("qform").addEventListener("input", qRender);
+$("qform").addEventListener("change", qRender);
+document.querySelectorAll(".qchip").forEach(b => b.addEventListener("click", () => { $("qKg").value = b.dataset.kg; qRender(); }));
+
+$("qform").addEventListener("submit", e => {
+  e.preventDefault();
+  const { kg, f, produk, bulan } = qState();
+  if (!kg) { toast("Isi kebutuhan per pengiriman (kg) terlebih dahulu."); $("qKg").focus(); return; }
+  const v = id => $(id).value.trim();
+  const ar = $("qArea");
+  let msg = `Halo ${CONFIG.namaUsaha}, saya ingin minta *penawaran harga partai besar*.\n\n`;
+  msg += `Nama usaha: ${v("qNama") || "-"}\nJenis usaha: ${v("qJenis")}\n`;
+  msg += `Kebutuhan: ${fmt(kg)} kg per pengiriman\nFrekuensi: ${f.label}\n`;
+  if (bulan !== null) msg += `Perkiraan volume: ± ${fmt(Math.round(bulan))} kg/bulan\n`;
+  msg += `Produk: ${produk.length ? produk.join(", ") : "-"}\n`;
+  msg += `Area: ${ar.options[ar.selectedIndex].text}\nMulai kirim: ${v("qMulai") || "-"}\n`;
+  if (v("qCatatan")) msg += `Catatan: ${v("qCatatan")}\n`;
+  openWA(msg);
+});
+qRender();
+
 /* ---------- Produk & pesanan ---------- */
 const cart = {};
-const productsEl = document.getElementById("products");
+const productsEl = $("products");
 
 CONFIG.produk.forEach(p => {
   const el = document.createElement("article");
-  el.className = "product"; el.id = "p-" + p.id;
+  el.className = "product rv"; el.id = "p-" + p.id;
   el.innerHTML = `
-    <h3>${p.nama}</h3>
-    <p class="desc">${p.ket}</p>
-    <p class="price ${p.harga ? "" : "ask"}">${p.harga ? rp(p.harga) + " / kg" : "Harga via WhatsApp"}</p>
-    <div class="stepper">
-      <button type="button" data-d="-1" aria-label="Kurangi ${p.nama}">&minus;</button>
-      <label><span class="sr">Berat ${p.nama} dalam kg</span>
-        <input type="number" inputmode="decimal" min="0" step="1" value="0" data-id="${p.id}"> kg</label>
-      <button type="button" data-d="1" aria-label="Tambah ${p.nama}">+</button>
+    <div class="pmedia"><span class="badge">Dipilih</span></div>
+    <div class="pbody">
+      <h3>${p.nama}</h3>
+      <p class="desc">${p.ket}</p>
+      <p class="price ${p.harga ? "" : "ask"}">${p.harga ? rp(p.harga) + " / kg" : "Harga via WhatsApp"}</p>
+      <div class="pctl">
+        <div class="stepper">
+          <button type="button" data-d="-1" aria-label="Kurangi ${p.nama}">&minus;</button>
+          <label><span class="sr">Berat ${p.nama} dalam kg</span>
+            <input type="number" inputmode="decimal" min="0" step="1" value="0" data-id="${p.id}"> kg</label>
+          <button type="button" data-d="1" aria-label="Tambah ${p.nama}">+</button>
+        </div>
+        <div class="adds">
+          <button type="button" data-d="10" aria-label="Tambah 10 kg ${p.nama}">+10</button>
+          <button type="button" data-d="25" aria-label="Tambah 25 kg ${p.nama}">+25</button>
+        </div>
+      </div>
     </div>`;
+  media(el.querySelector(".pmedia"), p.foto, p.nama, "drum", p.nama.toLowerCase());
   const input = el.querySelector("input");
-  el.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+  el.querySelectorAll("button[data-d]").forEach(b => b.addEventListener("click", () => {
     const v = Math.max(0, (parseFloat(input.value) || 0) + Number(b.dataset.d));
     input.value = v; setQty(p.id, v);
   }));
@@ -519,11 +917,11 @@ CONFIG.produk.forEach(p => {
 
 function setQty(id, v) {
   if (v > 0) cart[id] = v; else delete cart[id];
-  document.getElementById("p-" + id).classList.toggle("picked", v > 0);
+  $("p-" + id).classList.toggle("picked", v > 0);
   render();
 }
 
-const area = document.getElementById("fArea");
+const area = $("fArea");
 area.addEventListener("change", render);
 
 function totals() {
@@ -545,26 +943,25 @@ function shippingNote(kg) {
 
 function render() {
   const { items, kg, est } = totals();
-  const lines = document.getElementById("lines");
-  lines.innerHTML = items.length
+  $("lines").innerHTML = items.length
     ? items.map(x => `<li><span>${x.nama}</span><b>${fmt(x.kg)} kg</b></li>`).join("")
     : `<li class="empty">Belum ada produk dipilih.</li>`;
   const pct = Math.min(100, (kg / CONFIG.minGratisOngkirKg) * 100);
-  document.getElementById("totalKg").textContent = fmt(kg) + " kg";
-  document.getElementById("meterFill").style.width = pct + "%";
-  document.getElementById("meter").setAttribute("aria-valuenow", Math.round(pct));
-  document.getElementById("scaleNote").textContent = shippingNote(kg);
-  const estEl = document.getElementById("est");
+  $("totalKg").textContent = fmt(kg) + " kg";
+  $("meterFill").style.width = pct + "%";
+  $("meter").setAttribute("aria-valuenow", Math.round(pct));
+  $("scaleNote").textContent = shippingNote(kg);
+  const estEl = $("est");
   estEl.hidden = est === null;
   if (est !== null) estEl.textContent = "Estimasi harga produk: " + rp(est) + " (final dikonfirmasi via WhatsApp)";
-  document.getElementById("mTotal").textContent = fmt(kg) + " kg";
+  $("mTotal").textContent = fmt(kg) + " kg";
   document.body.classList.toggle("has-cart", kg > 0);
 }
 
-document.getElementById("sendOrder").addEventListener("click", () => {
+$("sendOrder").addEventListener("click", () => {
   const { items, kg, est } = totals();
   if (!items.length) { toast("Pilih minimal satu produk terlebih dahulu."); return; }
-  const v = id => document.getElementById(id).value.trim();
+  const v = id => $(id).value.trim();
   const areaLabel = area.options[area.selectedIndex].text;
   let msg = `Halo ${CONFIG.namaUsaha}, saya ingin memesan:\n`;
   items.forEach(x => { msg += `- ${x.nama}: ${fmt(x.kg)} kg\n`; });
@@ -579,6 +976,16 @@ document.getElementById("sendOrder").addEventListener("click", () => {
 });
 
 render();
+
+/* ---------- Animasi muncul saat scroll ---------- */
+(function () {
+  const els = document.querySelectorAll(".rv");
+  if (!("IntersectionObserver" in window)) { els.forEach(e => e.classList.add("in")); return; }
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+  }), { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+  els.forEach(e => io.observe(e));
+})();
 </script>
 </body>
 </html>

@@ -650,7 +650,7 @@ footer{padding:64px 0 120px;margin-top:96px;border-top:1px solid var(--line)}
         <p>Ceritakan volume dan jadwal yang Anda butuhkan. Kami balas dengan penawaran.</p>
         <div class="hero-actions">
           <a class="btn btn-accent" href="#penawaran">Minta harga partai</a>
-          <a class="btn btn-ghost-light" data-wa data-wa-msg="partai" href="#">Chat WhatsApp</a>
+          <a class="btn btn-ghost-light" data-wa href="#">Chat WhatsApp</a>
         </div>
       </div>
     </div>
@@ -700,6 +700,8 @@ const CONFIG = {
   jamBuka: "14.00-23.00 WIB, Setiap Hari",
   minGratisOngkirKg: 300,
   logo: "img/Logo Asyifa Jaya.jpeg",
+  // Pesan otomatis untuk tombol WhatsApp umum (header, tombol bulat, footer)
+  pesanWA: "Hallo,🖐🏻\nAsyifa jaya saya ingin bertanya mengenai harga ayam saat ini?\nTerimakasih☺️",
   areaKirim: ["Jakarta", "Bogor", "Depok", "Tangerang", "Bekasi"],
 
   // FOTO: unggah file ke folder img/ dengan nama persis seperti di bawah.
@@ -823,7 +825,7 @@ $("yr").textContent = new Date().getFullYear();
 document.querySelectorAll("[data-wa]").forEach(a => {
   const msg = a.dataset.waMsg === "partai"
     ? `Halo ${CONFIG.namaUsaha}, saya ingin minta penawaran harga partai besar.`
-    : `Halo ${CONFIG.namaUsaha}, saya ingin bertanya tentang produk ayam.`;
+    : CONFIG.pesanWA;
   if (waValid()) { a.href = waUrl(msg); a.target = "_blank"; a.rel = "noopener"; }
   a.addEventListener("click", e => { if (!waValid()) { e.preventDefault(); openWA(msg); } });
 });

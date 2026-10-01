@@ -6,6 +6,11 @@ Nama file harus **persis sama** dengan yang tertulis di `CONFIG` dalam `index.ht
 
 `Logo Asyifa Jaya.jpeg` — header, footer, ikon tab browser, bagian ajakan penutup.
 
+## Kode QR
+
+`Barcode.jpg` (asli) → `Barcode-web.png` (dipotong ke area putih, isi QR sama) — tampil di bagian Harga partai dan footer, **hanya di PC/laptop**.
+Jika QR diganti, potong juga margin abu-abunya atau ubah `src` di `index.html` ke file baru.
+
 ## Foto produk (sudah dipetakan di kode)
 
 | File | Produk | Dipakai juga di |
@@ -28,6 +33,6 @@ Semua foto produk yang ada juga tampil di strip foto berjalan di bawah hero (mun
 
 | File | Dipakai di |
 |---|---|
-| `gerai.jpg`, `peternakan.jpg`, `pemotongan.jpg`, `penyimpanan.jpg` | Bagian "Proses kami". Slider foto baru muncul jika minimal satu file ini ada; sebelumnya tampil sebagai 4 kartu langkah. |
+| `gerai.jpg`, `peternakan.jpg`, `pemotongan.jpg`, `penyimpanan.jpg` | Bagian "Proses kami". Setelah diunggah, isi kolom `foto` di `CONFIG.slides` (saat ini kosong agar tidak ada permintaan file yang gagal). Slider muncul jika minimal satu foto ada. |
 
 Ukuran disarankan: produk potret (tegak) seperti foto yang ada, mis. 900×1600, tampil dipotong rasio 4:5 di katalog — letakkan objek utama di tengah; proses 1600×1280. Kompres hingga < 300 KB per file.

@@ -10,7 +10,8 @@
 <meta property="og:title" content="Asyifa Jaya — Pemasok Ayam Potong Partai Besar">
 <meta property="og:description" content="Ayam utuh dan potongan untuk dapur usaha. Gratis ongkir se-Jabodetabek mulai 50 kg.">
 <meta property="og:locale" content="id_ID">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231F4D3A'/%3E%3Cpath d='M16 7c-3.6 0-6 3.3-6 7.6S12.4 25 16 25s6-6.1 6-10.4S19.6 7 16 7z' fill='%23E0A21B'/%3E%3C/svg%3E">
+<link rel="icon" type="image/jpeg" href="img/Logo%20Asyifa%20Jaya.jpeg">
+<link rel="apple-touch-icon" href="img/Logo%20Asyifa%20Jaya.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -77,7 +78,9 @@ em.hl{font-style:italic;color:var(--brand)}
 .site-head.scrolled{border-bottom-color:var(--line)}
 .site-head .wrap{display:flex;align-items:center;gap:28px;height:72px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand-mark{width:40px;height:40px;border-radius:12px;background:var(--brand);display:grid;place-items:center;color:var(--accent);flex:none}
+.brand-logo{width:48px;height:48px;border-radius:12px;background:#000;object-fit:cover;flex:none;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.brand-logo.lg{width:72px;height:72px;border-radius:16px}
+.cta-logo{width:96px;height:96px;border-radius:22px;margin:0 auto 18px;box-shadow:0 12px 30px rgba(0,0,0,.35);background:#000}
 .brand-name{font-family:var(--display);font-weight:700;font-size:1.3rem;line-height:1}
 .brand-sub{display:block;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
 .nav{display:flex;gap:26px;margin-left:auto}
@@ -130,7 +133,7 @@ em.hl{font-style:italic;color:var(--brand)}
 @media (prefers-reduced-motion:reduce){.track{transition:none}.tab[aria-selected="true"] .bar{animation:none;width:100%}}
 
 /* Hero mosaic */
-.mosaic{position:relative;display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr;gap:14px;aspect-ratio:6/5}
+.mosaic{position:relative;display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:14px;aspect-ratio:1/1;max-height:640px}
 .tile{position:relative;margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--brand);box-shadow:var(--shadow)}
 .tile:first-child{grid-row:1/3}
 .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
@@ -149,11 +152,11 @@ em.hl{font-style:italic;color:var(--brand)}
 .marquee{margin-top:56px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .mq-track{display:flex;gap:14px;width:max-content;animation:mq 60s linear infinite}
 .marquee:hover .mq-track{animation-play-state:paused}
-.mq-item{position:relative;flex:none;width:220px;aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;text-decoration:none;background:var(--brand)}
+.mq-item{position:relative;flex:none;width:200px;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;text-decoration:none;background:var(--brand)}
 .mq-item img{width:100%;height:100%;object-fit:cover}
 .mq-item span{position:absolute;inset:auto 0 0 0;padding:28px 14px 10px;background:linear-gradient(to top,rgba(10,24,17,.85),transparent);color:#fff;font-weight:700;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @keyframes mq{to{transform:translateX(calc(-50% - 7px))}}
-@media (max-width:560px){.mq-item{width:160px}}
+@media (max-width:560px){.mq-item{width:140px}}
 @media (prefers-reduced-motion:reduce){.mq-track{animation:none}.marquee{overflow-x:auto}}
 
 /* Proses */
@@ -259,7 +262,7 @@ legend{font-size:.84rem;font-weight:600;padding:0;margin-bottom:8px}
 .product{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
 .product:hover{box-shadow:var(--shadow)}
 .product.picked{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand)}
-.pmedia{position:relative;aspect-ratio:4/3;background:var(--brand);overflow:hidden}
+.pmedia{position:relative;aspect-ratio:4/5;background:var(--brand);overflow:hidden}
 .pmedia img{transition:transform .5s ease}
 .product:hover .pmedia img{transform:scale(1.04)}
 .pmedia .ph svg{width:52px;height:52px}
@@ -384,9 +387,7 @@ footer{padding:64px 0 120px;margin-top:96px;border-top:1px solid var(--line)}
 <header class="site-head" id="head">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Beranda">
-      <span class="brand-mark" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-3.5 0-6 3.2-6 7.5S8.5 21 12 21s6-6.2 6-10.5S15.5 3 12 3z"/></svg>
-      </span>
+      <img class="brand-logo" src="img/Logo%20Asyifa%20Jaya.jpeg" alt="" width="48" height="48">
       <span><span class="brand-name" data-bind="namaUsaha">Asyifa Jaya</span><span class="brand-sub">Pemasok ayam potong</span></span>
     </a>
     <nav class="nav" aria-label="Navigasi utama">
@@ -643,6 +644,7 @@ footer{padding:64px 0 120px;margin-top:96px;border-top:1px solid var(--line)}
   <section style="padding:0">
     <div class="wrap">
       <div class="cta on-dark rv">
+        <img class="cta-logo" src="img/Logo%20Asyifa%20Jaya.jpeg" alt="Logo Asyifa Jaya" width="96" height="96" loading="lazy">
         <span class="eyebrow">Mulai sekarang</span>
         <h2>Siap memasok <em>dapur usaha</em> Anda.</h2>
         <p>Ceritakan volume dan jadwal yang Anda butuhkan. Kami balas dengan penawaran.</p>
@@ -660,7 +662,7 @@ footer{padding:64px 0 120px;margin-top:96px;border-top:1px solid var(--line)}
     <div class="foot">
       <div>
         <a class="brand" href="#top">
-          <span class="brand-mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-3.5 0-6 3.2-6 7.5S8.5 21 12 21s6-6.2 6-10.5S15.5 3 12 3z"/></svg></span>
+          <img class="brand-logo lg" src="img/Logo%20Asyifa%20Jaya.jpeg" alt="" width="72" height="72">
           <span class="brand-name" data-bind="namaUsaha">Asyifa Jaya</span>
         </a>
         <p style="color:var(--muted);margin-top:14px;max-width:38ch">Ayam utuh dan potongan untuk usaha dan rumah tangga di Jabodetabek.</p>
@@ -697,6 +699,7 @@ const CONFIG = {
   alamatGerai: "Pasar Kebayoran Lama, Depan Toko Ananda",
   jamBuka: "14.00-23.00 WIB, Setiap Hari",
   minGratisOngkirKg: 300,
+  logo: "img/Logo Asyifa Jaya.jpeg",
   areaKirim: ["Jakarta", "Bogor", "Depok", "Tangerang", "Bekasi"],
 
   // FOTO: unggah file ke folder img/ dengan nama persis seperti di bawah.
@@ -720,20 +723,21 @@ const CONFIG = {
   heroProduk: ["utuh", "fillet", "pahab"],
   ctaFoto: "img/Ayam ekoran.jpeg",
 
+  // Urutan = urutan tampil di katalog. Produk tanpa foto sengaja di akhir.
   // harga: angka per kg (mis. 38000) atau null = "Harga via WhatsApp"
   // foto: path file di folder img/ (nama harus persis, termasuk huruf besar/kecil & spasi)
   produk: [
     { id: "utuh",   nama: "Ayam utuh / ekoran",   ket: "Bisa dipotong 4, 8, atau sesuai permintaan.", harga: null, foto: "img/Ayam ekoran.jpeg" },
     { id: "fillet", nama: "Dada fillet",          ket: "Tanpa tulang, dengan atau tanpa kulit.",     harga: null, foto: "img/Dada filet.jpeg" },
-    { id: "dada",   nama: "Dada",                 ket: "Dada dengan tulang dan kulit.",              harga: null, foto: "img/produk-dada.jpg" },
     { id: "pahab",  nama: "Paha bawah (pentung)", ket: "Drumstick.",                                  harga: null, foto: "img/Paha pentung.jpeg" },
-    { id: "pahaa",  nama: "Paha atas",            ket: "Bagian paha atas dengan tulang.",            harga: null, foto: "img/produk-paha-atas.jpg" },
     { id: "sayap",  nama: "Sayap",                ket: "Sayap utuh atau dipotong per ruas.",         harga: null, foto: "img/Sayap.jpeg" },
     { id: "ceker",  nama: "Ceker",                ket: "Sudah dibersihkan.",                          harga: null, foto: "img/Ceker.jpeg" },
     { id: "ati",    nama: "Hati ampela",          ket: "Jeroan pilihan.",                             harga: null, foto: "img/Hati ampela.jpeg" },
     { id: "usus",   nama: "Usus",                 ket: "Usus ayam untuk sate, goreng, atau soto.",   harga: null, foto: "img/Usus.jpeg" },
     { id: "kulit",  nama: "Kulit",                ket: "Kulit ayam untuk digoreng atau bahan olahan.", harga: null, foto: "img/Kulit.jpeg" },
     { id: "kepala", nama: "Kepala & leher",       ket: "Untuk kaldu dan masakan berkuah.",           harga: null, foto: "img/Kepala.jpeg" },
+    { id: "dada",   nama: "Dada",                 ket: "Dada dengan tulang dan kulit.",              harga: null, foto: "img/produk-dada.jpg" },
+    { id: "pahaa",  nama: "Paha atas",            ket: "Bagian paha atas dengan tulang.",            harga: null, foto: "img/produk-paha-atas.jpg" },
     { id: "rangka", nama: "Tulang / rangka",      ket: "Untuk bahan kaldu.",                          harga: null, foto: "img/produk-rangka.jpg" }
   ]
 };
@@ -808,6 +812,7 @@ $("yr").textContent = new Date().getFullYear();
   s.textContent = JSON.stringify({
     "@context": "https://schema.org", "@type": "LocalBusiness",
     name: CONFIG.namaUsaha, telephone: "+" + CONFIG.nomorWA,
+    logo: new URL(CONFIG.logo, location.href).href, image: new URL(CONFIG.logo, location.href).href,
     address: { "@type": "PostalAddress", streetAddress: CONFIG.alamatGerai, addressLocality: "Jakarta Selatan", addressRegion: "DKI Jakarta", addressCountry: "ID" },
     areaServed: CONFIG.areaKirim,
     description: "Pemasok ayam utuh dan potongan, eceran dan partai besar."
